@@ -1,4 +1,4 @@
-package com.example.cleantodo
+package com.example.cleantodo.feature_note.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
