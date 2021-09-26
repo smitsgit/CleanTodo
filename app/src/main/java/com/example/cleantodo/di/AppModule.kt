@@ -7,10 +7,7 @@ import androidx.room.Room
 import com.example.cleantodo.feature_note.data.data_source.NoteDatabase
 import com.example.cleantodo.feature_note.data.repository.NoteRepoImpl
 import com.example.cleantodo.feature_note.domain.repository.NoteRepo
-import com.example.cleantodo.feature_note.domain.usecases.AddNoteUseCase
-import com.example.cleantodo.feature_note.domain.usecases.DeleteNoteUseCase
-import com.example.cleantodo.feature_note.domain.usecases.GetNotesUseCase
-import com.example.cleantodo.feature_note.domain.usecases.NoteUseCases
+import com.example.cleantodo.feature_note.domain.usecases.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,7 +39,8 @@ object AppModule {
         return NoteUseCases(
             GetNotesUseCase(noteRpo),
             DeleteNoteUseCase(noteRpo),
-            AddNoteUseCase(noteRpo)
+            AddNoteUseCase(noteRpo),
+            GetNoteUseCase(noteRpo)
         )
     }
 }
